@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocCar - Aluguel de Carros</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">🚗</span>
+        <span class="logo-text">LocCar</span>
+      </div>
+
+      <nav>
+        <a href="#">Início</a>
+        <a href="#">Carros</a>
+        <a href="#">Promoções</a>
+        <a href="#">Empresa</a>
+        <a href="#">Contato</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#" class="btn-login">Entrar</a>
+        <a href="#" class="btn-signup">Cadastrar</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CARROSSEL -->
+  <section class="carousel">
+    <div class="carousel-track" id="carouselTrack">
+
+      <div class="carousel-slide">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600&q=80" alt="Slide 1">
+        <div class="carousel-caption">
+          <h2>Viaje com liberdade</h2>
+          <p>Os melhores carros para cada tipo de aventura</p>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1600&q=80" alt="Slide 2">
+        <div class="carousel-caption">
+          <h2>Estilo e conforto</h2>
+          <p>Frota premium com preços acessíveis em todo o Brasil</p>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1600&q=80" alt="Slide 3">
+        <div class="carousel-caption">
+          <h2>Destinos inesquecíveis</h2>
+          <p>Reserve online em minutos e retire na agência mais próxima</p>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=1600&q=80" alt="Slide 4">
+        <div class="carousel-caption">
+          <h2>Mais de 500 agências</h2>
+          <p>Presente em todas as regiões do Brasil</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Setas -->
+    <button class="carousel-btn prev" id="prevBtn">&#8592;</button>
+    <button class="carousel-btn next" id="nextBtn">&#8594;</button>
+
+    <!-- Dots -->
+    <div class="carousel-dots" id="carouselDots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-tag">A locadora que você pode confiar</p>
+        <h1>Alugue o carro ideal<br>para sua viagem</h1>
+        <p class="hero-sub">Mais de 500 agências em todo o Brasil. Reserva rápida e sem complicação.</p>
+      </div>
+
+      <!-- RESERVATION FORM -->
+      <div class="reservation-card">
+        <div class="res-tabs">
+          <button class="res-tab active">🚘 Retirada e devolução no mesmo local</button>
+          <button class="res-tab">🔄 Locais diferentes</button>
+        </div>
+
+        <div class="res-form">
+          <div class="res-row">
+            <div class="res-field full">
+              <label>📍 Local de retirada</label>
+              <input type="text" placeholder="Cidade, aeroporto ou agência">
+            </div>
+          </div>
+
+          <div class="res-row two-cols">
+            <div class="res-field">
+              <label>📅 Data de retirada</label>
+              <input type="date">
+            </div>
+            <div class="res-field">
+              <label>⏰ Horário</label>
+              <select>
+                <option>08:00</option>
+                <option>09:00</option>
+                <option>10:00</option>
+                <option>12:00</option>
+                <option>14:00</option>
+                <option>16:00</option>
+                <option>18:00</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="res-row two-cols">
+            <div class="res-field">
+              <label>📅 Data de devolução</label>
+              <input type="date">
+            </div>
+            <div class="res-field">
+              <label>⏰ Horário</label>
+              <select>
+                <option>08:00</option>
+                <option>09:00</option>
+                <option>10:00</option>
+                <option>12:00</option>
+                <option>14:00</option>
+                <option>16:00</option>
+                <option>18:00</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="btn-reservar">Buscar Carros</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS BAR -->
+  <section class="benefits-bar">
+    <div class="benefits-inner">
+      <div class="benefit-item">
+        <span class="benefit-icon">✅</span>
+        <span>Sem taxa de cancelamento</span>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">🛡️</span>
+        <span>Seguro incluso</span>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">📍</span>
+        <span>+500 agências no Brasil</span>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">💳</span>
+        <span>Pagamento facilitado</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARS SECTION -->
+  <section class="cars-section">
+    <div class="cars-inner">
+      <div class="section-header">
+        <h2>Escolha o carro ideal</h2>
+        <p>Frotas modernas para todos os tipos de viagem</p>
+      </div>
+
+      <div class="cars-grid">
+
+        <div class="car-card">
+          <div class="car-badge">Mais popular</div>
+          <img
+            src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=700&q=80"
+            alt="Fiat Mobi"
+          >
+          <div class="car-info">
+            <div class="car-category">Econômico</div>
+            <h3>Fiat Mobi</h3>
+            <div class="specs">
+              <span>⚙️ Manual</span>
+              <span>👥 5 lugares</span>
+              <span>⛽ Flex</span>
+            </div>
+            <div class="car-footer">
+              <div class="price">
+                <span class="price-from">a partir de</span>
+                <strong>R$ 89<small>/dia</small></strong>
+              </div>
+              <button>Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <img
+            src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=700&q=80"
+            alt="Chevrolet Onix"
+          >
+          <div class="car-info">
+            <div class="car-category">Intermediário</div>
+            <h3>Chevrolet Onix</h3>
+            <div class="specs">
+              <span>⚙️ Manual</span>
+              <span>👥 5 lugares</span>
+              <span>⛽ Flex</span>
+            </div>
+            <div class="car-footer">
+              <div class="price">
+                <span class="price-from">a partir de</span>
+                <strong>R$ 109<small>/dia</small></strong>
+              </div>
+              <button>Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <img
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=700&q=80"
+            alt="Hyundai HB20"
+          >
+          <div class="car-info">
+            <div class="car-category">Automático</div>
+            <h3>Hyundai HB20</h3>
+            <div class="specs">
+              <span>⚙️ Automático</span>
+              <span>👥 5 lugares</span>
+              <span>⛽ Flex</span>
+            </div>
+            <div class="car-footer">
+              <div class="price">
+                <span class="price-from">a partir de</span>
+                <strong>R$ 129<small>/dia</small></strong>
+              </div>
+              <button>Reservar</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="see-all">
+        <a href="#">Ver todos os carros →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMO BANNER -->
+  <section class="promo-banner">
+    <div class="promo-inner">
+      <div class="promo-text">
+        <span class="promo-tag">Oferta especial</span>
+        <h2>Reserve com antecedência e economize até 30%</h2>
+        <p>Válido para reservas com 7 dias de antecedência. Aproveite!</p>
+        <button>Ver promoções</button>
+      </div>
+      <div class="promo-img">
+        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&q=80" alt="Promoção">
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-icon">🚗</span>
+          <span class="logo-text">LocCar</span>
+        </div>
+        <p>A locadora de carros com maior presença no Brasil. Praticidade, segurança e conforto para sua viagem.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <a href="#">Sobre nós</a>
+          <a href="#">Carreiras</a>
+          <a href="#">Imprensa</a>
+        </div>
+        <div class="footer-col">
+          <h4>Serviços</h4>
+          <a href="#">Aluguel de carros</a>
+          <a href="#">Carros para empresa</a>
+          <a href="#">Promoções</a>
+        </div>
+        <div class="footer-col">
+          <h4>Suporte</h4>
+          <a href="#">Central de ajuda</a>
+          <a href="#">Contato</a>
+          <a href="#">Política de privacidade</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 LocCar - Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+
+  <script>
+    const track   = document.getElementById('carouselTrack');
+    const dots    = document.querySelectorAll('.dot');
+    const total   = document.querySelectorAll('.carousel-slide').length;
+    let current   = 0;
+    let timer;
+
+    function goTo(index) {
+      current = (index + total) % total;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+
+    function startAuto() {
+      clearInterval(timer);
+      timer = setInterval(next, 5000);
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', () => { next(); startAuto(); });
+    document.getElementById('prevBtn').addEventListener('click', () => { prev(); startAuto(); });
+    dots.forEach((d, i) => d.addEventListener('click', () => { goTo(i); startAuto(); }));
+
+    let startX = 0;
+    track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+    track.addEventListener('touchend',   e => {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) { diff > 0 ? next() : prev(); startAuto(); }
+    });
+
+    startAuto();
+  </script>
+
+</body>
+</html>
